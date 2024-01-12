@@ -2,7 +2,7 @@
 function HomePage() {
   return (
     <div>
-      Hello world welcome to homepage
+      The site is under construction    
     </div>
   )
 }
