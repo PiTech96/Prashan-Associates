@@ -1,5 +1,20 @@
 const colors = {
     // light to dark
+    blue: {
+      DEFAULT: "#3498db", // You can replace this with your preferred default blue color
+      b50: "#E5F1FB",
+      b25: "#D2E8F6",
+      b1: "#BFDFF1",
+      b2: "#9BCAE5",
+      b3: "#77B2D9",
+      b4: "#548ACD",
+      b5: "#3063C1",
+      b6: "#1F4D9B",
+      b7: "#153C7A",
+      b8: "#0E2D5B",
+      b9: "#081F3D",
+      b10: "#040F1F",
+    },
     gray: {
       DEFAULT: "#1b1b1b", //600
       g50: "#F9FAFB",
