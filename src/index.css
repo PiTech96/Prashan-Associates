@@ -13,3 +13,8 @@
 .active {
   border-bottom: #EB1C24 3px solid ;
 }
+
+.hero{
+  background: url(./assets/image/backgroundImg.jpeg) center/cover;
+  height:120vh;
+}
