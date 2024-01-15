@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowDown2 } from "iconsax-react";
 import { heading2 } from "../../styles/text";
+import { StyledNav } from "./styled";
+
 function IndustryDropdown() {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
 
@@ -25,7 +27,7 @@ function IndustryDropdown() {
       </button>
 
       {isDropdownVisible && (
-        <div className="absolute w-full p-2  z-1 rounded-lg bg-white shadow w-[180px]">
+        <StyledNav className="absolute w-full p-2  z-1 rounded-lg bg-white shadow">
           <ul className="py-2 text-sm text-gray-700 dark:text-gray-200">
             <Link
               to="/enquiry"
@@ -52,7 +54,7 @@ function IndustryDropdown() {
               <li>PUBLICATION </li>
             </Link>
           </ul>
-        </div>
+        </StyledNav>
       )}
     </div>
   );

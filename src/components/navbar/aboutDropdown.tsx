@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { Link } from "react-router-dom"
-import { ArrowDown2} from "iconsax-react";
+import { Link } from "react-router-dom";
+import { ArrowDown2 } from "iconsax-react";
 import { heading2 } from "../../styles/text";
-;
+import { StyledNav } from "./styled";
+
 
 function AboutDropDown() {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
@@ -25,9 +26,8 @@ function AboutDropDown() {
         <li className={`${heading2}`}>ABOUT US</li>
         <ArrowDown2 size="24" variant="Bold" color="#0A0739" />
       </button>
-
       {isDropdownVisible && (
-        <div className="absolute w-full p-2  z-1 rounded-lg opacity-[.80] bg-white shadow w-[18rem] ">
+        <StyledNav className="absolute w-full p-2  z-1 rounded-lg opacity-[.80] bg-white shadow">
           <ul className="py-2 text-sm text-gray-700 dark:text-gray-200">
             <Link
               to="/frim"
@@ -48,7 +48,7 @@ function AboutDropDown() {
               <li>OUR LEADERS</li>
             </Link>
           </ul>
-        </div>
+        </StyledNav>
       )}
     </div>
   );
