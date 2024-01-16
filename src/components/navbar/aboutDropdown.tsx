@@ -27,23 +27,23 @@ function AboutDropDown() {
         <ArrowDown2 size="24" variant="Bold" color="#0A0739" />
       </button>
       {isDropdownVisible && (
-        <StyledNav className="absolute w-full p-2  z-1 rounded-lg opacity-[.80] bg-white shadow">
+        <StyledNav className="absolute w-full p-2  rounded-lg  bg-white shadow">
           <ul className="py-2 text-sm text-gray-700 dark:text-gray-200">
             <Link
               to="/frim"
-              className="hover:text-primary-p10 block px-4 py-2 text-utils-u1 opacity-[.80] hover:bg-primary-p50"
+              className="hover:text-primary-p10 block px-4 py-2 text-utils-u1 opacity-[.90] hover:bg-primary-p50"
             >
               <li>THE FIRM</li>
             </Link>
             <Link
               to="/missions"
-              className="hover:text-primary-p10 block px-4 py-2 text-utils-u1  opacity-[.80]  hover:bg-primary-p50"
+              className="hover:text-primary-p10 block px-4 py-2 text-utils-u1  opacity-[.90]  hover:bg-primary-p50"
             >
               <li>MISSION, VISION AND SHARED VALUES</li>
             </Link>
             <Link
               to="/team"
-              className="hover:text-primary-p10 block px-4 py-2 text-utils-u1  opacity-[.80] hover:bg-primary-p50"
+              className="hover:text-primary-p10 block px-4 py-2 text-utils-u1  opacity-[.90] hover:bg-primary-p50"
             >
               <li>OUR LEADERS</li>
             </Link>
