@@ -1,15 +1,15 @@
 import Logo from "../../assets/icons/logo";
 
-import { ArrowDown2, Call, Sms } from "iconsax-react";
+import {Call, Sms } from "iconsax-react";
 import { NavLink } from "react-router-dom";
-import { heading1, heading2 } from "../../styles/text";
+import {  heading2 } from "../../styles/text";
 import AboutDropDown from "./aboutDropdown";
 import ServicesDropdown from "./servicesDropdown";
 import IndustryDropdown from "./industryDropdown";
 
 function Navbar() {
   return (
-    <div className="w-full">
+    <div className="w-full bg-white z-50 sticky top-0">
       <div>
         <div className="flex justify-between px-6 items-center ">
           <Logo />
@@ -26,7 +26,7 @@ function Navbar() {
         </div>
       </div>
       <ul className=" flex justify-center items-center border p-2">
-        <div className="flex gap-[50px]">
+        <div className="flex gap-[75px]">
           <NavLink to="/">
             <li className={`db:${heading2}`}>HOME</li>
           </NavLink>
