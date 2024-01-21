@@ -27,3 +27,18 @@ export const StyledContentContainer = styled.div`
     opacity: 0.8;
   }
 `;
+
+
+interface StyledBtnProps {
+  active: boolean;
+}
+
+
+export const StyledDiv = styled.button<StyledBtnProps>`
+  padding: 10px 20px;
+  // border-radius: 8px;
+  cursor: pointer;
+  border-bottom: ${(props) => (props.active ? "2px solid #EB1C24" : "#fff")};
+  opacity: ${(props) => (props.active ? "1" : ".7")};
+  color: ${(props) => (props.active ? "#22092C" : "#555")};
+`;

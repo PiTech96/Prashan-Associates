@@ -1,6 +1,6 @@
 
 import HeroSection from './hero'
-import HomeServices from './services'
+import HomeServices from './homeServices'
 
 function Home() {
   return (
