@@ -1,4 +1,5 @@
 
+import HomeAboutUs from './aboutus'
 import HeroSection from './hero'
 import HomeServices from './homeServices'
 
@@ -7,6 +8,7 @@ function Home() {
     <div>
       <HeroSection/>
       <HomeServices/>
+      <HomeAboutUs/>
     </div>
   )
 }
