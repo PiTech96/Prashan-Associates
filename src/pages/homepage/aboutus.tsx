@@ -19,20 +19,20 @@ function HomeAboutUs() {
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit.
           </p>
-          <div className="grid grid-cols-2 gap-2 pt-2">
+          <div className="grid grid-cols-2 gap-4 pt-2">
             <div className="flex items-center">
               <ClipboardTick size="32" color="#FF8A65" variant="Bulk" />
               <h4>Award Wining</h4>
             </div>
-            <div className="flex">
+            <div className="flex items-center">
               <ClipboardTick size="32" color="#FF8A65" variant="Bulk" />
               <h4>24/7 Support</h4>
             </div>
-            <div className="flex">
+            <div className="flex items-center">
               <ClipboardTick size="32" color="#FF8A65" variant="Bulk" />
               <h4>Professional Team</h4>
             </div>
-            <div className="flex">
+            <div className="flex items-center">
               <ClipboardTick size="32" color="#FF8A65" variant="Bulk" />
               <h4>Quality Service</h4>
             </div>

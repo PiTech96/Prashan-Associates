@@ -2,6 +2,7 @@
 import HomeAboutUs from './aboutus'
 import HeroSection from './hero'
 import HomeServices from './homeServices'
+import ReqQuote from './reqQuote'
 
 function Home() {
   return (
@@ -9,6 +10,7 @@ function Home() {
       <HeroSection/>
       <HomeServices/>
       <HomeAboutUs/>
+      <ReqQuote/>
     </div>
   )
 }

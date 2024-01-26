@@ -30,7 +30,7 @@ export const StyledContentContainer = styled.div`
 
 
 interface StyledBtnProps {
-  active: boolean;
+  active: boolean ;
 }
 
 
