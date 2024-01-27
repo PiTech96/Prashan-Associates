@@ -13,11 +13,11 @@ function ReqQuote() {
           </h2>
           <div className="flex  gap-6">
             <div className="flex items-center  my-2 gap-2">
-              <MessageTick size="32" color="#F02D3A" variant="Bold" />
+              <MessageTick size="32" color="#FF8A65" variant="Bold" />
               <h3 className={`${paragraph1}`}>Reply within 24 hours</h3>
             </div>
             <div className="flex items-center my-2 gap-2">
-              <CallReceived size="32" color="#F02D3A" variant="Bold" />
+              <CallReceived size="32" color="#FF8A65" variant="Bold" />
               <h3 className={`${paragraph1}`}>24 hrs telephone support</h3>
             </div>
           </div>
@@ -26,7 +26,7 @@ function ReqQuote() {
             you require any further information, feel free to contact us.
           </p>
           <div className=" my-6 flex items-center gap-6">
-            <div className="p-2 bg-primary rounded-[4px]">
+            <div className="p-2 bg-[#FF8A65] rounded-[4px]">
               <CallReceived
                 color="#FFF"
                 className="w-[40px] h-[40px] p-2"

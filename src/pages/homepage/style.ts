@@ -42,3 +42,18 @@ export const StyledDiv = styled.button<StyledBtnProps>`
   opacity: ${(props) => (props.active ? "1" : ".7")};
   color: ${(props) => (props.active ? "#22092C" : "#555")};
 `;
+
+
+
+export const StyledCard = styled('div')`
+display: flex;
+flex-direction: column; 
+align-items: center;
+justify-content: center;
+gap: 10px; 
+font-size: 16px;
+padding: 20px; 
+border-radius: 8px;
+background: var(--Background, #F8F8F8);
+box-shadow: -4px -4px 20px 0px rgba(34,9,44, 0.05);
+`;
