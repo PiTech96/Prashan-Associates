@@ -1,12 +1,16 @@
-function Logo() {
+type styleProps = {
+  width: number ;
+};
+
+function Logo({ width }: styleProps) {
   return (
     <div>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         version="1.1"
         xmlnsXlink="http://www.w3.org/1999/xlink"
-        width="180"
         height="80"
+        width={width / 9}
         viewBox="0 0 2000 696"
       >
         <g transform="matrix(1,0,0,1,-1.2121212121212466,0.9122481221965018)">
@@ -14,8 +18,8 @@ function Logo() {
             viewBox="0 0 396 138"
             data-background-color="#d2d6dc"
             preserveAspectRatio="xMidYMid meet"
-            height="696"
-            width="2000"
+            width={width}
+            height='700'
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
           >
