@@ -1,10 +1,14 @@
+import Frim from "./frim";
 
 function About() {
   return (
     <div>
-<h1>Welcome to about page</h1>      
+      <div>
+        {/* <Frim/> */}
+
+      </div>
     </div>
-  )
+  );
 }
 
-export default About
+export default About;
