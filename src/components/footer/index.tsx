@@ -6,7 +6,7 @@ import { heading1 } from "../../styles/text";
 
 function Footer() {
   return (
-    <div className="bg-utils">
+    <div className="bg-[#0A0739]">
       <div className=" w-full flex justify-center items-center py-5">
         <div className="flex w-[80%]">
           <div className="w-[40%] mb-4">

@@ -1,5 +1,6 @@
 import { heading, heading1, paragraph } from "../../styles/text";
 import { ClipboardTick } from "iconsax-react";
+import PrashantImg from "../../assets/image/img.png";
 
 function HomeAboutUs() {
   return (
@@ -39,7 +40,7 @@ function HomeAboutUs() {
           </div>
         </div>
         <div className="w-[46%] border border-black bg-[#333]">
-          <img src="" className="" alt="myimg" />
+          <img src={PrashantImg} className="" alt="myimg" />
         </div>
       </div>
     </div>
