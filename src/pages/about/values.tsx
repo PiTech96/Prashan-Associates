@@ -1,5 +1,6 @@
 import img from "../../assets/image/1.jpg";
 import { EyeOutlined } from "@ant-design/icons";
+import { paragraph } from "../../styles/text";
 
 function Values() {
   return (
@@ -17,49 +18,51 @@ function Values() {
         />
       </div>
       <div className="w-full  flex flex-col  items-center gap-6">
-        <div className="w-[75%] flex flex-col gap-4 my-6">
-          <div className="w-[50%]">
-            <div className="flex">
-              <EyeOutlined />
-              <h1 className="text-[21px]">Our mission</h1>
+        <div className="w-[70%] flex flex-col gap-12 my-6">
+          <div className="flex gap-8">
+            <div className="w-1/2">
+              <h1 className="text-[21px] font-semibold">Our Vision</h1>
+              <p className={`${paragraph}`}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec
+                augue eget libero lacinia efficitur. In hac habitasse platea
+                dictumst. Vivamus id felis et elit imperdiet ultricies. Proin
+                non libero nec sapien venenatis consectetur. Suspendisse
+                potenti. Vestibulum bibendum aliquet magna, sit amet venenatis
+                nulla tincidunt in. Sed vel euismod arcu. Ut nec sapien ac
+                libero consectetur. Suspendisse potenti. Vestibulum bibendum
+                aliquet magna, sit amet venenatis nulla tincidunt in. Sed vel
+                euismod arcu. Ut nec sapien ac libero.
+              </p>
+              <div className="flex gap-8 my-4">
+                <h1>vision no 1</h1>
+                <h1>vision no 2</h1>
+                <h1>vision no 3</h1>
+              </div>
             </div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec
-              augue eget libero lacinia efficitur. In hac habitasse platea
-              dictumst. Vivamus id felis et elit imperdiet ultricies. Proin non
-              libero nec sapien venenatis consectetur. Suspendisse potenti.
-              Vestibulum bibendum aliquet magna, sit amet venenatis nulla
-              tincidunt in. Sed vel euismod arcu. Ut nec sapien ac libero
-            </p>
+            <img src="" className="border w-1/2" alt="" />
           </div>
-          <div className="self-end w-[50%]">
-            <div className="flex">
-              <EyeOutlined />
-              <h1 className="text-[21px]">Our Vision</h1>
-            </div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec
-              augue eget libero lacinia efficitur. In hac habitasse platea
-              dictumst. Vivamus id felis et elit imperdiet ultricies. Proin non
-              libero nec sapien venenatis consectetur. Suspendisse potenti.
-              Vestibulum bibendum aliquet magna, sit amet venenatis nulla
-              tincidunt in. Sed vel euismod arcu. Ut nec sapien ac libero
-            </p>
-          </div>
+          <div className="flex gap-8">
+            <img src="" className="w-1/2 border" alt="" />
+            <div className="w-1/2">
+              <h1 className="text-[21px] font-semibold">Our Missions</h1>
 
-          <div className="w-[50%]">
-            <div className="flex">
-              <EyeOutlined />
-              <h1 className="text-[21px] ">Our Values</h1>
+              <p className={`${paragraph}`}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec
+                augue eget libero lacinia efficitur. In hac habitasse platea
+                dictumst. Vivamus id felis et elit imperdiet ultricies. Proin
+                non libero nec sapien venenatis consectetur. Suspendisse
+                potenti. Vestibulum bibendum aliquet magna, sit amet venenatis
+                nulla tincidunt in. Sed vel euismod arcu. Ut nec sapien ac
+                libero consectetur. Suspendisse potenti. Vestibulum bibendum
+                aliquet magna, sit amet venenatis nulla tincidunt in. Sed vel
+                euismod arcu. Ut nec sapien ac libero.
+              </p>
+              <div className="flex gap-8 my-4">
+                <h1>Mission no 1</h1>
+                <h1>Mission no 2</h1>
+                <h1>Mission no 3</h1>
+              </div>
             </div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec
-              augue eget libero lacinia efficitur. In hac habitasse platea
-              dictumst. Vivamus id felis et elit imperdiet ultricies. Proin non
-              libero nec sapien venenatis consectetur. Suspendisse potenti.
-              Vestibulum bibendum aliquet magna, sit amet venenatis nulla
-              tincidunt in. Sed vel euismod arcu. Ut nec sapien ac libero
-            </p>
           </div>
         </div>
         <div></div>
