@@ -8,6 +8,7 @@ import Industry from "../pages/industry";
 import { Routes, Route } from "react-router-dom";
 import Frim from "../pages/about/frim";
 import Values from "../pages/about/values";
+import Leaders from "../pages/about/leaders";
 
 
 
@@ -24,6 +25,7 @@ function Routing() {
           <Route path="/portfolio" element={< Portfolio/>} />
           <Route path="/frim" element={<Frim/>} />
           <Route path="/missions" element={<Values/>} />
+          <Route path="/team" element={<Leaders/>} />
         </Route>
       </Routes>
     </div>

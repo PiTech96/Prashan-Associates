@@ -1,12 +1,12 @@
 import img from "../../assets/image/1.jpg";
-import { EyeOutlined } from "@ant-design/icons";
+// import { EyeOutlined } from "@ant-design/icons";
 import { paragraph } from "../../styles/text";
 
 function Values() {
   return (
     <div className="w-full relative">
       <div className="bg-blue relative h-[400px]">
-        <div className="absolute top-[35%] left-[32%] transform translate(-50%, -50%) text-center text-white flex flex-col items-center justify-center">
+        <div className="absolute top-[40%] left-[32%] transform translate(-50%, -50%) text-center text-white flex flex-col items-center justify-center">
           <h1 className="text-[32px] font-medium">About</h1>
           <hr className="w-[15rem]"></hr>
           <h2 className="text-[42px] font-bold">Our Mission and Values</h2>

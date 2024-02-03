@@ -5,7 +5,7 @@ function Frim() {
   return (
     <div className="w-full relative">
       <div className="bg-blue relative h-[400px]">
-        <div className="absolute top-[35%] left-[40%] transform translate(-50%, -50%) text-center text-white">
+        <div className="absolute top-[20%] left-[42%] transform translate(-50%, -50%) text-center text-white">
           <h1 className="text-[32px] font-medium">About</h1>
           <hr></hr>
           <h2 className="text-[48px] font-bold">Our Firm</h2>
