@@ -1,9 +1,14 @@
 import img from "../../assets/image/1.jpg";
 import { heading2 } from "../../styles/text";
 import { Award } from "iconsax-react";
-import { StyledCard } from "./style";
+import { StyledCard, StyledSelect, StyledInput } from "./style";
+import CustomButton from "../../components/button/button";
 
 function OurServices() {
+  const handleRequestQuote = (e: React.FormEvent) => {
+    e.preventDefault();
+    alert("Your request was saved!!");
+  };
   return (
     <div className="w-full relative">
       <div className="bg-blue relative h-[400px]">
@@ -24,7 +29,7 @@ function OurServices() {
               <Award size="32" variant="Bulk" color="#FF8A65" />
             </div>
             <div className="text-center flex flex-col gap-[10px] p-4">
-              <h2 className={`${heading2} font-`}>Award Wining services</h2>
+              <h2 className={`${heading2} font-`}>Audit and Insurance</h2>
               <p className="text-utils-u1 opacity-[0.7]">
                 Empower your online presence through our expert web development.
               </p>
@@ -35,7 +40,7 @@ function OurServices() {
               <Award size="32" variant="Bulk" color="#FF8A65" />
             </div>
             <div className="text-center flex flex-col gap-[10px] p-4">
-              <h2 className={`${heading2} font-`}>Award Wining services</h2>
+              <h2 className={`${heading2} font-`}>Tax and Regularity</h2>
               <p className="text-utils-u1 opacity-[0.7]">
                 Empower your online presence through our expert web development.
               </p>
@@ -46,7 +51,7 @@ function OurServices() {
               <Award size="32" variant="Bulk" color="#FF8A65" />
             </div>
             <div className="text-center flex flex-col gap-[10px] p-4">
-              <h2 className={`${heading2} font-`}>Award Wining services</h2>
+              <h2 className={`${heading2} font-`}>Risk Advisory</h2>
               <p className="text-utils-u1 opacity-[0.7]">
                 Empower your online presence through our expert web development.
               </p>
@@ -57,7 +62,7 @@ function OurServices() {
               <Award size="32" variant="Bulk" color="#FF8A65" />
             </div>
             <div className="text-center flex flex-col gap-[10px] p-4">
-              <h2 className={`${heading2} font-`}>Award Wining services</h2>
+              <h2 className={`${heading2} font-`}>Technology Consulting</h2>
               <p className="text-utils-u1 opacity-[0.7]">
                 Empower your online presence through our expert web development.
               </p>
@@ -68,12 +73,48 @@ function OurServices() {
               <Award size="32" variant="Bulk" color="#FF8A65" />
             </div>
             <div className="text-center flex flex-col gap-[10px] p-4">
-              <h2 className={`${heading2} font-`}>Award Wining services</h2>
+              <h2 className={`${heading2} font-`}>Info System Audit</h2>
               <p className="text-utils-u1 opacity-[0.7]">
                 Empower your online presence through our expert web development.
               </p>
             </div>
           </StyledCard>
+        </div>
+        <h1 className="text-[21px] mt-6 mb-2">Request a Quote</h1>
+        <div className="w-full flex justify-center items-cen">
+          <form onSubmit={handleRequestQuote} className=" w-[45%] mb-10">
+            <div className="flex border rounded-[8px]">
+              <StyledInput
+                data-aos="fade-right"
+                type="text"
+                name="Email"
+                placeholder="Enter your email address..."
+                className="opacity-[.70]"
+                required
+                // value={formData.fullName}
+                // onChange={handleChange}
+              />
+              <StyledSelect
+                variant="filled"
+                mode="multiple"
+                className=""
+                placeholder="select a service"
+                options={[
+                  { value: "audit", label: "Audit" },
+                  { value: "tax", label: "Tax" },
+                  { value: "Risk Advisory", label: "Risk Advisory" },
+                  {
+                    value: "Technology Consulting",
+                    label: "Technology Consulting",
+                  },
+                  { value: "Info System Audit", label: "Info System Audit" },
+                ]}
+              />
+            </div>
+            <CustomButton type="submit" className="mt-2 py-[100px]">
+              Request
+            </CustomButton>
+          </form>
         </div>
       </div>
     </div>
