@@ -1,0 +1,72 @@
+[
+  {
+    "title": "Audit and Insurance",
+    "description": "Empower your online presence through our expert web development.",
+    "services": [
+      {
+        "name": "Service 1",
+        "details": "Details about Service 1"
+      },
+      {
+        "name": "Service 2",
+        "details": "Details about Service 2"
+      }
+    ]
+  },
+  {
+    "title": "Tax and Regularity",
+    "description": "Empower your online presence through our expert web development.",
+    "services": [
+      {
+        "name": "Service 1",
+        "details": "Details about Service 1"
+      },
+      {
+        "name": "Service 2",
+        "details": "Details about Service 2"
+      }
+    ]
+  },
+  {
+    "title": "Risk Advisory",
+    "description": "Empower your online presence through our expert web development.",
+    "services": [
+      {
+        "name": "Service 1",
+        "details": "Details about Service 1"
+      },
+      {
+        "name": "Service 2",
+        "details": "Details about Service 2"
+      }
+    ]
+  },
+  {
+    "title": "Technology Consulting",
+    "description": "Empower your online presence through our expert web development.",
+    "services": [
+      {
+        "name": "Service 1",
+        "details": "Details about Service 1"
+      },
+      {
+        "name": "Service 2",
+        "details": "Details about Service 2"
+      }
+    ]
+  },
+  {
+    "title": "Info System Audit",
+    "description": "Empower your online presence through our expert web development.",
+    "services": [
+      {
+        "name": "Service 1",
+        "details": "Details about Service 1"
+      },
+      {
+        "name": "Service 2",
+        "details": "Details about Service 2"
+      }
+    ]
+  }
+]

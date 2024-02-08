@@ -4,7 +4,7 @@ import { Call, Sms } from "iconsax-react";
 import { NavLink } from "react-router-dom";
 import { heading2 } from "../../styles/text";
 import AboutDropDown from "./aboutDropdown";
-import IndustryDropdown from "./industryDropdown";
+// import IndustryDropdown from "./industryDropdown";
 
 function Navbar() {
   return (
@@ -32,14 +32,18 @@ function Navbar() {
             <li className={`db:${heading2}`}>HOME</li>
           </NavLink>
           <AboutDropDown />
-          
+
           <NavLink to="/services">
             <li className={`db:${heading2}`}>SERVICES</li>
           </NavLink>
-
-          <IndustryDropdown />
+          <NavLink to="/industry">
+            <li className={`db:${heading2}`}>INDUSTRY</li>
+          </NavLink>
           <NavLink to="/portfolio">
             <li className={`${heading2}`}>PORTFOLIO</li>
+          </NavLink>
+          <NavLink to="/blog">
+            <li className={`db:${heading2}`}>BLOGS</li>
           </NavLink>
           <NavLink to="/contact">
             <li className={`${heading2}`}>CONTACT</li>

@@ -2,10 +2,6 @@ import styled from "styled-components";
 import { Select } from "antd";
 
 export const StyledCard = styled("div")`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   gap: 10px;
   font-size: 16px;
   padding: 40px;
