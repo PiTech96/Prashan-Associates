@@ -1,14 +1,30 @@
 import img from "../../assets/image/1.jpg";
 import { heading2 } from "../../styles/text";
-import { Award } from "iconsax-react";
 import { StyledCard, StyledSelect, StyledInput } from "./style";
 import CustomButton from "../../components/button/button";
-
+import services from "./services.json";
+import { Award } from "iconsax-react";
+import { useState } from "react";
 function OurServices() {
+  const [hoveredCards, setHoveredCards] = useState(new Array(services.length).fill(false));
+
+  const handleMouseEnter = (index :number) => {
+    const updatedHoveredCards = [...hoveredCards];
+    updatedHoveredCards[index] = true;
+    setHoveredCards(updatedHoveredCards);
+  };
+
+  const handleMouseLeave = (index :number) => {
+    const updatedHoveredCards = [...hoveredCards];
+    updatedHoveredCards[index] = false;
+    setHoveredCards(updatedHoveredCards);
+  };
+
   const handleRequestQuote = (e: React.FormEvent) => {
     e.preventDefault();
     alert("Your request was saved!!");
   };
+
   return (
     <div className="w-full relative">
       <div className="bg-blue relative h-[400px]">
@@ -16,69 +32,32 @@ function OurServices() {
           <h1 className="text-[32px] font-semibold">Our Services</h1>
           <hr></hr>
         </div>
-        <img
-          src={img}
-          className="w-full h-full object-cover opacity-[20%]"
-          alt="hello"
-        />
+        <img src={img} className="w-full h-full object-cover opacity-[20%]" alt="hello" />
       </div>
       <div className="w-full  flex flex-col items-center border">
         <div className="grid grid-cols-3 w-[90%]">
-          <StyledCard className="">
-            <div className=" felx justify-center  w-[58px] h-[58px] items-center rounded-[50%] p-[13px]">
-              <Award size="32" variant="Bulk" color="#FF8A65" />
-            </div>
-            <div className="text-center flex flex-col gap-[10px] p-4">
-              <h2 className={`${heading2} font-`}>Audit and Insurance</h2>
-              <p className="text-utils-u1 opacity-[0.7]">
-                Empower your online presence through our expert web development.
-              </p>
-            </div>
-          </StyledCard>
-          <StyledCard className="">
-            <div className=" felx justify-center  w-[58px] h-[58px] items-center rounded-[50%] p-[13px]">
-              <Award size="32" variant="Bulk" color="#FF8A65" />
-            </div>
-            <div className="text-center flex flex-col gap-[10px] p-4">
-              <h2 className={`${heading2} font-`}>Tax and Regularity</h2>
-              <p className="text-utils-u1 opacity-[0.7]">
-                Empower your online presence through our expert web development.
-              </p>
-            </div>
-          </StyledCard>
-          <StyledCard className="   ">
-            <div className=" felx justify-center  w-[58px] h-[58px] items-center rounded-[50%] p-[13px]">
-              <Award size="32" variant="Bulk" color="#FF8A65" />
-            </div>
-            <div className="text-center flex flex-col gap-[10px] p-4">
-              <h2 className={`${heading2} font-`}>Risk Advisory</h2>
-              <p className="text-utils-u1 opacity-[0.7]">
-                Empower your online presence through our expert web development.
-              </p>
-            </div>
-          </StyledCard>
-          <StyledCard className="   ">
-            <div className=" felx justify-center  w-[58px] h-[58px] items-center rounded-[50%] p-[13px]">
-              <Award size="32" variant="Bulk" color="#FF8A65" />
-            </div>
-            <div className="text-center flex flex-col gap-[10px] p-4">
-              <h2 className={`${heading2} font-`}>Technology Consulting</h2>
-              <p className="text-utils-u1 opacity-[0.7]">
-                Empower your online presence through our expert web development.
-              </p>
-            </div>
-          </StyledCard>
-          <StyledCard className="   ">
-            <div className=" felx justify-center  w-[58px] h-[58px] items-center rounded-[50%] p-[13px]">
-              <Award size="32" variant="Bulk" color="#FF8A65" />
-            </div>
-            <div className="text-center flex flex-col gap-[10px] p-4">
-              <h2 className={`${heading2} font-`}>Info System Audit</h2>
-              <p className="text-utils-u1 opacity-[0.7]">
-                Empower your online presence through our expert web development.
-              </p>
-            </div>
-          </StyledCard>
+          {services.map((item, index) => (
+            <StyledCard
+              key={index} 
+              className="border"
+              onMouseEnter={() => handleMouseEnter(index)}
+              onMouseLeave={() => handleMouseLeave(index)}
+            >
+              {hoveredCards[index] ? (
+                <div className="w-full bg-primary">hello world</div>
+              ) : (
+                <div className="border border-black flex flex-col items-center justify-center">
+                  <div className="border felx justify-center w-[58px] h-[58px] items-center rounded-[50%] p-[13px]">
+                    <Award size="32" variant="Bulk" color="#FF8A65" />
+                  </div>
+                  <div className="border text-center flex flex-col gap-[10px] p-4">
+                    <h2 className={`${heading2} font-`}>{item.title}</h2>
+                    <p className="text-utils-u1 opacity-[0.7]">{item.description}</p>
+                  </div>
+                </div>
+              )}
+            </StyledCard>
+          ))}
         </div>
         <h1 className="text-[21px] mt-6 mb-2">Request a Quote</h1>
         <div className="w-full flex justify-center items-cen">
@@ -91,8 +70,6 @@ function OurServices() {
                 placeholder="Enter your email address..."
                 className="opacity-[.70]"
                 required
-                // value={formData.fullName}
-                // onChange={handleChange}
               />
               <StyledSelect
                 variant="filled"
@@ -103,10 +80,7 @@ function OurServices() {
                   { value: "audit", label: "Audit" },
                   { value: "tax", label: "Tax" },
                   { value: "Risk Advisory", label: "Risk Advisory" },
-                  {
-                    value: "Technology Consulting",
-                    label: "Technology Consulting",
-                  },
+                  { value: "Technology Consulting", label: "Technology Consulting" },
                   { value: "Info System Audit", label: "Info System Audit" },
                 ]}
               />
@@ -120,5 +94,6 @@ function OurServices() {
     </div>
   );
 }
-
 export default OurServices;
+
+  // const handleRequestQuote = () => {

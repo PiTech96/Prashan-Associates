@@ -9,6 +9,7 @@ import { Routes, Route } from "react-router-dom";
 import Frim from "../pages/about/frim";
 import Values from "../pages/about/values";
 import Leaders from "../pages/about/leaders";
+import Blogs from "../pages/blogs/blogs";
 
 
 
@@ -22,6 +23,7 @@ function Routing() {
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/industry" element={< Industry/>} />
+          <Route path="/blog" element={< Blogs/>} />
           <Route path="/portfolio" element={< Portfolio/>} />
           <Route path="/frim" element={<Frim/>} />
           <Route path="/missions" element={<Values/>} />
