@@ -1,24 +1,30 @@
+import React, { useState, useEffect } from "react";
 import img from "../../assets/image/1.jpg";
 import { heading2 } from "../../styles/text";
 import { StyledCard, StyledSelect, StyledInput } from "./style";
 import CustomButton from "../../components/button/button";
-import services from "./services.json";
 import { Award } from "iconsax-react";
-import { useState } from "react";
+import services from "./services.json";
+
 function OurServices() {
   const [hoveredCards, setHoveredCards] = useState(new Array(services.length).fill(false));
 
-  const handleMouseEnter = (index :number) => {
+  const handleMouseEnter = (index: number) => {
     const updatedHoveredCards = [...hoveredCards];
     updatedHoveredCards[index] = true;
     setHoveredCards(updatedHoveredCards);
   };
 
-  const handleMouseLeave = (index :number) => {
+  const handleMouseLeave = (index: number) => {
     const updatedHoveredCards = [...hoveredCards];
     updatedHoveredCards[index] = false;
     setHoveredCards(updatedHoveredCards);
   };
+
+  useEffect(() => {
+    // Cleanup when component unmounts
+    return () => setHoveredCards(new Array(services.length).fill(false));
+  }, []);
 
   const handleRequestQuote = (e: React.FormEvent) => {
     e.preventDefault();
@@ -38,19 +44,19 @@ function OurServices() {
         <div className="grid grid-cols-3 w-[90%]">
           {services.map((item, index) => (
             <StyledCard
-              key={index} 
-              className="border"
+              key={index}
+              className=""
               onMouseEnter={() => handleMouseEnter(index)}
               onMouseLeave={() => handleMouseLeave(index)}
             >
               {hoveredCards[index] ? (
                 <div className="w-full bg-primary">hello world</div>
               ) : (
-                <div className="border border-black flex flex-col items-center justify-center">
-                  <div className="border felx justify-center w-[58px] h-[58px] items-center rounded-[50%] p-[13px]">
+                <div className="flex flex-col items-center justify-center">
+                  <div className="felx justify-center w-[58px] h-[58px] items-center rounded-[50%] p-[13px]">
                     <Award size="32" variant="Bulk" color="#FF8A65" />
                   </div>
-                  <div className="border text-center flex flex-col gap-[10px] p-4">
+                  <div className="text-center flex flex-col gap-[10px] p-4">
                     <h2 className={`${heading2} font-`}>{item.title}</h2>
                     <p className="text-utils-u1 opacity-[0.7]">{item.description}</p>
                   </div>
@@ -62,7 +68,7 @@ function OurServices() {
         <h1 className="text-[21px] mt-6 mb-2">Request a Quote</h1>
         <div className="w-full flex justify-center items-cen">
           <form onSubmit={handleRequestQuote} className=" w-[45%] mb-10">
-            <div className="flex border rounded-[8px]">
+            <div className="flex rounded-[8px]">
               <StyledInput
                 data-aos="fade-right"
                 type="text"
@@ -94,6 +100,5 @@ function OurServices() {
     </div>
   );
 }
-export default OurServices;
 
-  // const handleRequestQuote = () => {
+export default OurServices;
