@@ -7,23 +7,19 @@ import { Award } from "iconsax-react";
 import services from "./services.json";
 
 function OurServices() {
-  const [hoveredCards, setHoveredCards] = useState(new Array(services.length).fill(false));
+  const [hoveredCardIndex, setHoveredCardIndex] = useState(null);
 
   const handleMouseEnter = (index: number) => {
-    const updatedHoveredCards = [...hoveredCards];
-    updatedHoveredCards[index] = true;
-    setHoveredCards(updatedHoveredCards);
+    setHoveredCardIndex(index);
   };
 
-  const handleMouseLeave = (index: number) => {
-    const updatedHoveredCards = [...hoveredCards];
-    updatedHoveredCards[index] = false;
-    setHoveredCards(updatedHoveredCards);
+  const handleMouseLeave = () => {
+    setHoveredCardIndex(null);
   };
 
   useEffect(() => {
     // Cleanup when component unmounts
-    return () => setHoveredCards(new Array(services.length).fill(false));
+    return () => setHoveredCardIndex(null);
   }, []);
 
   const handleRequestQuote = (e: React.FormEvent) => {
@@ -38,19 +34,30 @@ function OurServices() {
           <h1 className="text-[32px] font-semibold">Our Services</h1>
           <hr></hr>
         </div>
-        <img src={img} className="w-full h-full object-cover opacity-[20%]" alt="hello" />
+        <img
+          src={img}
+          className="w-full h-full object-cover opacity-[20%]"
+          alt="hello"
+        />
       </div>
-      <div className="w-full  flex flex-col items-center border">
+      <div className="w-full flex flex-col items-center border">
         <div className="grid grid-cols-3 w-[90%]">
           {services.map((item, index) => (
             <StyledCard
               key={index}
               className=""
               onMouseEnter={() => handleMouseEnter(index)}
-              onMouseLeave={() => handleMouseLeave(index)}
+              onMouseLeave={handleMouseLeave}
             >
-              {hoveredCards[index] ? (
-                <div className="w-full bg-primary">hello world</div>
+              {hoveredCardIndex === index ? (
+                <div className="w-full bg-primary">
+                  {item.services.map((service, serviceIndex) => (
+                    <div key={serviceIndex}>
+                      <h3>{service.name}</h3>
+                      <p>{service.details}</p>
+                    </div>
+                  ))}
+                </div>
               ) : (
                 <div className="flex flex-col items-center justify-center">
                   <div className="felx justify-center w-[58px] h-[58px] items-center rounded-[50%] p-[13px]">
@@ -58,7 +65,9 @@ function OurServices() {
                   </div>
                   <div className="text-center flex flex-col gap-[10px] p-4">
                     <h2 className={`${heading2} font-`}>{item.title}</h2>
-                    <p className="text-utils-u1 opacity-[0.7]">{item.description}</p>
+                    <p className="text-utils-u1 opacity-[0.7]">
+                      {item.description}
+                    </p>
                   </div>
                 </div>
               )}
@@ -86,7 +95,10 @@ function OurServices() {
                   { value: "audit", label: "Audit" },
                   { value: "tax", label: "Tax" },
                   { value: "Risk Advisory", label: "Risk Advisory" },
-                  { value: "Technology Consulting", label: "Technology Consulting" },
+                  {
+                    value: "Technology Consulting",
+                    label: "Technology Consulting",
+                  },
                   { value: "Info System Audit", label: "Info System Audit" },
                 ]}
               />
