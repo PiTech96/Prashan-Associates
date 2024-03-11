@@ -2,7 +2,7 @@
 function Contact() {
   return (
     <div>
-      welcome to contact page
+      welcome to the contact page.
     </div>
   )
 }
