@@ -50,10 +50,10 @@ function OurServices() {
               onMouseLeave={handleMouseLeave}
             >
               {hoveredCardIndex === index ? (
-                <div className="w-full bg-primary">
+                <div className="text-center p-4">
                   {item.services.map((service, serviceIndex) => (
                     <div key={serviceIndex}>
-                      <h3>{service.name}</h3>
+                      <h3 className="m-2">{service.name}</h3>
                       <p>{service.details}</p>
                     </div>
                   ))}

@@ -15,7 +15,7 @@ function Audit() {
         of their performance
       </p>
       <CustomButton>
-        <Link className="m-2" to={"/audit-insurance"}>Learn More</Link>
+        <Link className="m-2" to={"/services"}>Learn More</Link>
       </CustomButton>
     </div>
   </div>
