@@ -1,6 +1,8 @@
 import img from "../../assets/image/1.jpg";
 // import { EyeOutlined } from "@ant-design/icons";
 import { paragraph } from "../../styles/text";
+import vision from "../../assets/image/vision1.jpg"
+import mission from "../../assets/image/mission1.jpg"
 
 function Values() {
   return (
@@ -19,9 +21,9 @@ function Values() {
       </div>
       <div className="w-full  flex flex-col  items-center gap-6">
         <div className="w-[70%] flex flex-col gap-12 my-6">
-          <div className="flex gap-8">
+          <div className="flex items-center gap-8">
             <div className="w-1/2">
-              <h1 className="text-[21px] font-semibold">Our Vision</h1>
+              <h1 className="text-[24px] font-semibold">Our Vision</h1>
               <p className={`${paragraph}`}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec
                 augue eget libero lacinia efficitur. In hac habitasse platea
@@ -39,12 +41,12 @@ function Values() {
                 <h1>vision no 3</h1>
               </div>
             </div>
-            <img src="" className="border w-1/2" alt="" />
+            <img src={vision} className="border w-1/2" alt="" />
           </div>
-          <div className="flex gap-8">
-            <img src="" className="w-1/2 border" alt="" />
+          <div className="flex items-center gap-8">
+            <img src={mission} className="w-1/2 border" alt="" />
             <div className="w-1/2">
-              <h1 className="text-[21px] font-semibold">Our Missions</h1>
+              <h1 className="text-[24px] font-semibold">Our Missions</h1>
 
               <p className={`${paragraph}`}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec
