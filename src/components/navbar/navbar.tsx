@@ -39,9 +39,6 @@ function Navbar() {
           <NavLink to="/industry">
             <li className={`db:${heading2}`}>INDUSTRY</li>
           </NavLink>
-          <NavLink to="/portfolio">
-            <li className={`${heading2}`}>PORTFOLIO</li>
-          </NavLink>
           <NavLink to="/blog">
             <li className={`db:${heading2}`}>BLOGS</li>
           </NavLink>

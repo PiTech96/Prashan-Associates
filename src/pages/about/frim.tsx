@@ -19,7 +19,7 @@ function Frim() {
       <div className="w-full  flex flex-col items-center border">
         <div className="w-[80%]  mt-8">
           <div className="flex">
-            <p className="w-1/2">
+            <p className="w-1/2 p-2">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec
               augue eget libero lacinia efficitur. In hac habitasse platea
               dictumst. Vivamus id felis et elit imperdiet ultricies. Proin non
@@ -27,7 +27,7 @@ function Frim() {
               Vestibulum bibendum aliquet magna, sit amet venenatis nulla
               tincidunt in. Sed vel euismod arcu. Ut nec sapien ac libero
               fermentum dapibus. Duis scelerisque tellus nec odio consectetur
-              vestibulum. In tincidunt felis in
+              vestibulum.
               <br /> <br />
               facilisis convallis. Fusce malesuada bibendum velit, vel
               ullamcorper dui luctus vitae. Pellentesque habitant morbi
@@ -41,7 +41,7 @@ function Frim() {
               est malesuada venenatis. Nullam ac nisi nec elit feugiat cursus
               eget ac metus. Nam in ex at purus laoreet ultrices a id felis.
             </p>
-            <img src={img1} className="w-1/2  " alt="" />
+            <img src={img1} className="w-1/2 m-2" alt="" />
           </div>
           <p className="my-4 ">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec
