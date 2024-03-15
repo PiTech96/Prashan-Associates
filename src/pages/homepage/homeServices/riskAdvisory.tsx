@@ -16,7 +16,7 @@ function RiskAdvisory() {
           of their performance
         </p>
         <CustomButton>
-          <Link className="m-2" to={"/risk-advisory"}>Learn More</Link>
+          <Link className="m-2" to={"/services"}>Learn More</Link>
         </CustomButton>
       </div>
     </div>
