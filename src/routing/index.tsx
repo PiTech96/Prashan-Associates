@@ -10,6 +10,7 @@ import Frim from "../pages/about/frim";
 import Values from "../pages/about/values";
 import Leaders from "../pages/about/leaders";
 import Blogs from "../pages/blogs/blogs";
+import BlogDetails from "../pages/blogs/blogDetails";
 
 
 
@@ -23,11 +24,12 @@ function Routing() {
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/industry" element={< Industry/>} />
-          <Route path="/blog" element={< Blogs/>} />
           <Route path="/portfolio" element={< Portfolio/>} />
           <Route path="/frim" element={<Frim/>} />
           <Route path="/missions" element={<Values/>} />
           <Route path="/team" element={<Leaders/>} />
+          <Route path="/blog" element={< Blogs/>} />
+          <Route path="/blog/:id" element={< BlogDetails/>} />
         </Route>
       </Routes>
     </div>
