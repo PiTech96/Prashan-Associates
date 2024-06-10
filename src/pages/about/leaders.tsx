@@ -1,5 +1,5 @@
 import { Facebook } from "iconsax-react";
-import { LinkedinFilled, YoutubeFilled  } from "@ant-design/icons";
+// import { LinkedinFilled, YoutubeFilled  } from "@ant-design/icons";
 import { FaSquareXTwitter } from "react-icons/fa6";
 
 import img from "../../assets/image/team.jpg";
@@ -52,8 +52,8 @@ function Leaders() {
               <div className="flex gap-5 my-4 items-center">
                 <Facebook color="blue" variant="Bold" size={40} />
                 <FaSquareXTwitter className=" text-[2.1rem]" />
-                <LinkedinFilled className="text-[#0077b5] text-[2.1rem]" />
-                <YoutubeFilled className="text-[#ff0000] text-[2.1rem]"/>
+                {/* <LinkedinFilled className="text-[#0077b5] text-[2.1rem]" /> */}
+                {/* <YoutubeFilled className="text-[#ff0000] text-[2.1rem]"/> */}
               </div>
             </div>
             <img src={prashant} className="w-[40%]" alt="" />
